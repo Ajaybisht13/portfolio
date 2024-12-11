@@ -4,22 +4,22 @@ const App = () => {
   const customScheme = 'myapp://home'; // Replace with your app's custom scheme
   const appStoreURL = 'https://play.google.com'; // Replace with your app's store URL
 
-  useEffect(() => {
-    // Redirect to app or app store
-    const redirect = () => {
-      const timer = setTimeout(() => {
-        // If the app isn't installed, redirect to the app store
-        window.location.href = appStoreURL;
-      }, 2000);
+  // useEffect(() => {
+  //   // Redirect to app or app store
+  //   const redirect = () => {
+  //     const timer = setTimeout(() => {
+  //       // If the app isn't installed, redirect to the app store
+  //       window.location.href = appStoreURL;
+  //     }, 2000);
 
-      // Attempt to open the app using the custom scheme
-      window.location.href = customScheme;
+  //     // Attempt to open the app using the custom scheme
+  //     window.location.href = customScheme;
 
-      return () => clearTimeout(timer);
-    };
+  //     return () => clearTimeout(timer);
+  //   };
 
-    redirect();
-  }, []);
+  //   redirect();
+  // }, []);
 
   return (
     <div style={styles.container}>
